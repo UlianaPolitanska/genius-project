@@ -138,16 +138,42 @@ address {
   gap: 40px;
 }
 .header__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 64px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 64px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.header__button {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .header__button {
+    display: block;
+  }
+}
+.header__burger {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  fill: var(--color-primary-light);
+}
+@media screen and (mix-width: 1280px) {
+  .header__burger {
+    display: none;
+  }
 }
 
 .hero-section {
@@ -161,8 +187,15 @@ address {
   margin-bottom: 0;
   color: var(--color-primary-light);
   text-align: center;
-  font-size: 128px;
+  font-size: 67px;
+  line-height: 1;
   font-weight: 900;
+}
+@media screen and (min-width: 768px) {
+  .hero-section__title {
+    font-size: 128px;
+    line-height: 1.5;
+  }
 }
 
 .text-brand {
