@@ -49,10 +49,16 @@ body {
   color: var(--color-primary-dark);
   background-color: var(--color-primary-light);
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1.5;
   margin: 0;
+}
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 18px;
+    font-weight: 400;
+  }
 }
 
 h1,
@@ -189,9 +195,17 @@ address {
   background-position: center top;
   background-size: cover;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .hero-section {
     padding: 272px 0;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url("../images/hero-section-background@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
   }
 }
 .hero-section__title {
@@ -202,7 +216,7 @@ address {
   line-height: 1;
   font-weight: 900;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .hero-section__title {
     font-size: 128px;
     line-height: 1.5;
@@ -212,7 +226,7 @@ address {
 .hero-section__button {
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .hero-section__button {
     display: none;
   }
@@ -235,13 +249,24 @@ address {
 }
 
 .section {
-  padding: 48px 0;
+  padding: 20px 0;
+}
+@media screen and (min-width: 1280px) {
+  .section {
+    padding: 48px 0;
+  }
 }
 .section__title {
-  font-size: 64px;
+  font-size: 32px;
   font-weight: 900;
-  line-height: 1.3;
+  line-height: 1.5;
   color: var(--color-primary-dark);
+}
+@media screen and (min-width: 1280px) {
+  .section__title {
+    font-size: 64px;
+    line-height: 1.3;
+  }
 }
 .section__title--centered {
   text-align: center;
@@ -302,12 +327,20 @@ address {
 }
 
 .traditions-section {
-  padding-top: 96px;
+  padding-top: 40px;
+}
+@media screen and (min-width: 1280px) {
+  .traditions-section {
+    padding-top: 96px;
+  }
 }
 .traditions-section__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -321,6 +354,15 @@ address {
 }
 .traditions-section__text--limited {
   max-width: 340px;
+}
+.traditions-section__image {
+  display: none;
+  border-radius: 400px 400px 0px 0px;
+}
+@media screen and (min-width: 1280px) {
+  .traditions-section__image {
+    display: block;
+  }
 }
 
 .chefs-section__title {
