@@ -1,5 +1,5 @@
 .formats-section {
-    &__container {
+    &__slider {
         display: flex;
         gap: 32px;
         align-items: center;
@@ -9,14 +9,8 @@
         margin-bottom: 80px;
     }
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+    &__container {
+        overflow: hidden;
     }
 
-    &__item {
-        flex-basis: calc((100% - 40px) / 3);
-        /*повернутись до калькулятора*/
-    }
 }
